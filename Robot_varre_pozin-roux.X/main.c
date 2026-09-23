@@ -4,7 +4,7 @@
 #include "ChipConfig.h"
 #include "IO.h"
 #include "timer.h"
-
+#include "PWM.h"
 
 int main (void){
     
@@ -26,7 +26,8 @@ int main (void){
     
     InitTimer23();
     InitTimer1();
-    
+    InitPWM();
+    PWMSetSpeed(20);
     // Boucle Principale
    
     while(1)
